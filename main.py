@@ -25,7 +25,7 @@ def Header():
 ██║░░░░░██║░░██║██████╔╝██████╔╝╚█████╔╝██████╔╝
 ╚═╝░░░░░╚═╝░░╚═╝╚═════╝░╚═════╝░░╚════╝░╚═════╝░
                             \033[1;39mDeveloper by Eratonos
-                                                Ibrahim\033[1;31m
+                                            Ibrahim\033[1;31m
 """.center(shutil.get_terminal_size().columns))
 
 Header()
