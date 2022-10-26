@@ -7,6 +7,9 @@ import json
 import re
 import secrets
 import string
+import datetime
+
+x = datetime.datetime.now()
 
 os.system("clear")
 
@@ -21,7 +24,8 @@ def Header():
 ██╔═══╝░██╔══██║░╚═══██╗░╚═══██╗██║░░██║░╚═══██╗
 ██║░░░░░██║░░██║██████╔╝██████╔╝╚█████╔╝██████╔╝
 ╚═╝░░░░░╚═╝░░╚═╝╚═════╝░╚═════╝░░╚════╝░╚═════╝░
-                            \033[1;39mDeveloper by Eratonos\033[1;31m
+                            \033[1;39mDeveloper by Eratonos
+                                                Ibrahim\033[1;31m
 """.center(shutil.get_terminal_size().columns))
 
 Header()
@@ -42,6 +46,9 @@ if int(var) == 1:
     for i in range(int(leng)):
         pwd += ''.join(secrets.choice(alphabet))
 
+    f = open("passwords.txt", "a")
+    f.write(f"{x.strftime('%x')} {x.strftime('%X')}: {pwd}\n")
+
     print(colorama.Fore.RED+"  └ Senin sifren → "+colorama.Back.RED+colorama.Fore.WHITE+pwd)
 elif int(var) == 2:
     word = input(colorama.Fore.LIGHTRED_EX + "· Soz & Cumle daxil edin > " + colorama.Style.RESET_ALL)
@@ -59,4 +66,6 @@ elif int(var) == 2:
         .replace("O", "_0")\
         .replace("u", "7")\
         .replace("U", "_7")
+    f = open("passwords.txt", "a")
+    f.write(f"{x.strftime('%x')} {x.strftime('%X')}: {pwd}\n")
     print(colorama.Fore.RED + "  └ Senin sifren → " + colorama.Back.RED + colorama.Fore.WHITE + pwd)
